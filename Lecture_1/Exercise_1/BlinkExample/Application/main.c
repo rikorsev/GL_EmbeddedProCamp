@@ -19,17 +19,7 @@ static volatile uint32_t runtime = 0;
 void gpio_init(void)
 {
 	GPIO_InitTypeDef        gpio = {0};
-//  GPIO_InitTypeDef gpio = {0};
 
-//	/* GPIOA Periph clock enable */
-//  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-
-//  /* Configure PA5 in output pushpull mode */
-//  gpio.GPIO_Pin   = LED_PIN;
-//  gpio.GPIO_Speed = GPIO_Speed_2MHz;
-//  gpio.GPIO_Mode  = GPIO_Mode_Out_PP;
-//  GPIO_Init(GPIOA, &gpio);
-	
 	 /* GPIOE Periph clock enable */
   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOE, ENABLE);
   
