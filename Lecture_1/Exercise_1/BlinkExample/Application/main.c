@@ -2,7 +2,7 @@
 
 /** 
   * @brief This devenition specefies the pin which connected to the board LED
-	*/
+  */
 #define LED_PORT   (GPIOE)
 #define LED_PINS   (GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15 )
 #define TIM_PERIOD (8000)
@@ -13,14 +13,14 @@ static volatile uint32_t runtime = 0;
 
 /**
   * @brief  This function inits the GPIO pin which connected to board led
-	*
-	* @retval None
-	*/
+  *
+  * @retval None
+  */
 void gpio_init(void)
 {
-	GPIO_InitTypeDef        gpio = {0};
+  GPIO_InitTypeDef        gpio = {0};
 
-	 /* GPIOE Periph clock enable */
+   /* GPIOE Periph clock enable */
   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOE, ENABLE);
   
   /* Configure PE14 and PE15 in output pushpull mode */
@@ -123,7 +123,7 @@ int main(void)
 }
 
 /**
-	* @brief  This is an interrupt handler routine for TIM4.
+  * @brief  This is an interrupt handler routine for TIM4.
   *         It just check if source of interrupt is Timer Update event.
   *         If yes, then it updates runtime counter and clear pending bit.
   *
